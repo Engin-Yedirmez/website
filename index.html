@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WildWorld - Animal Information</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🐾 WildWorld</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('all')">Home</a></li>
+        <li><a href="#" onclick="showSection('mammals')">Mammals</a></li>
+        <li><a href="#" onclick="showSection('birds')">Birds</a></li>
+        <li><a href="#" onclick="showSection('reptiles')">Reptiles</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Explore the Animal Kingdom</h2>
+      <p>Discover fascinating facts about animals from around the world.</p>
+    </section>
+
+    <!-- Mammals Section -->
+    <section id="mammals" class="animal-info">
+      <h2>Mammals</h2>
+      <a href="lion.html" class="animal-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="Lion">
+        <h3>Lion</h3>
+        <p>Click to learn more about lions.</p>
+      </a>
+      <a href="elephant.html" class="animal-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/800px-African_Bush_Elephant.jpg" alt="Elephant">
+        <h3>Elephant</h3>
+        <p>Click to learn more about elephants.</p>
+      </a>
+      <a href="giraffe.html" class="animal-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Giraffe_standing.jpg" alt="Giraffe">
+        <h3>Giraffe</h3>
+        <p>Click to learn more about giraffes.</p>
+      </a>
+    </section>
+
+    <!-- Birds Section -->
+    <section id="birds" class="animal-info">
+      <h2>Birds</h2>
+      <a href="eagle.html" class="animal-card">
+        <img src="https://www.originaltravel.co.uk/travel-blog/showphoto/4246/0" alt="Eagle">
+        <h3>Eagle</h3>
+        <p>Click to learn more about eagles.</p>
+      </a>
+      <a href="parrot.html" class="animal-card">
+        <img src="https://cdn.britannica.com/35/3635-050-96241EC1/Scarlet-macaw-ara-macao.jpg" alt="Parrot">
+        <h3>Parrot</h3>
+        <p>Click to learn more about parrots.</p>
+      </a>
+      <a href="penguin.html" class="animal-card">
+        <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKIWgaiJUtss/v2/1800x1350.webp" alt="Penguin">
+        <h3>Penguin</h3>
+        <p>Click to learn more about penguins.</p>
+      </a>
+    </section>
+
+    <!-- Reptiles Section -->
+    <section id="reptiles" class="animal-info">
+      <h2>Reptiles</h2>
+      <a href="crocodile.html" class="animal-card">
+        <img src="https://c02.purpledshub.com/uploads/sites/62/2014/11/GettyImages-123529247-2a29d6c.jpg?w=1175&webp=1" alt="Crocodile">
+        <h3>Crocodile</h3>
+        <p>Click to learn more about crocodiles.</p>
+      </a>
+      <a href="snake.html" class="animal-card">
+        <img src="https://d.newsweek.com/en/full/2362759/tiger-snake.webp?w=790&f=9b11414ee40c90f646720f10c418463c" alt="Snake">
+        <h3>Snake</h3>
+        <p>Click to learn more about snakes.</p>
+      </a>
+      <a href="turtle.html" class="animal-card">
+        <img src="https://platform.vox.com/wp-content/uploads/sites/2/2025/03/GettyImages-172416075.jpg?quality=90&strip=all&crop=0%2C5.5555555555556%2C100%2C88.888888888889&w=1080" alt="Turtle">
+        <h3>Turtle</h3>
+        <p>Click to learn more about turtles.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 WildWorld. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to toggle sections -->
+  <script>
+    function showSection(section) {
+      const allSections = ['mammals', 'birds', 'reptiles'];
+      allSections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.style.display = (section === 'all' || section === id) ? 'flex' : 'none';
+        }
+      });
+    }
+
+    // Show all by default on page load
+    window.onload = () => showSection('all');
+  </script>
+</body>
+</html>
